@@ -1,25 +1,23 @@
-<script setup>
-// import { RouterLink, RouterView } from 'vue-router'
-// import products from './views/products.vue'
-</script>
-
 <template>
   <header>
     <div class="wrapper">
-      <!-- <products /> -->
       <div class="nav-bar">
-        <RouterLink to="/products">상품목록</RouterLink>
-        <RouterLink to="/favorites">즐겨찾기</RouterLink>
-        <RouterLink to="/mypage">마이페이지</RouterLink>
-        <RouterLink to="/test">TEST</RouterLink>
+        <router-link to='/products'>상품목록</router-link>
+        <router-link to="/favorites">즐겨찾기</router-link>
+        <router-link to="/mypage">마이페이지</router-link>
+        <router-link to="/test">TEST</router-link>
       </div>
     </div>
   </header>
-  <!-- <body>
-    
-  </body> -->
-  <RouterView />
+  <body></body>
+  <footer></footer>
+  <router-view />
 </template>
+
+<script setup>
+const RouterLink = require('vue-router').RouterLink;
+const RouterView = require('vue-router').RouterView;
+</script>
 
 <style scoped>
 .nav-bar {

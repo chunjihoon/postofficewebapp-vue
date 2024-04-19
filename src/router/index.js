@@ -1,45 +1,45 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import app from '../App.vue'
-import products from '../views/products.vue'
+// import { createRouter, createWebHistory } from 'vue-router'
+// import app from '../App.vue'
+// import products from '../views/products.vue'
+
+const createRouter = require('vue-router').createRouter;
+const createWebHistory = require('vue-router').createWebHistory;
+
+const app = require('../App.vue');
+const products = require('../views/products.vue');
+const favorites = require('../views/favorites.vue');
+const mypage = require('../views/mypage.vue');
+const test = require('../views/test.vue');
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(), //import.meta.env.BASE_URL // process.env.BASE_URL
   routes: [
     {
       path: '/',
-      name: 'app',
+      name: app,
       component: app
     },
     {
       path: '/products',
-      name: 'products',
+      name: products,
       component: products
     },
     {
       path: '/favorites',
-      name: 'favorites',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/favorites.vue')
+      name: favorites,
+      component: favorites
     },
     {
       path: '/mypage',
-      name: 'mypage',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/mypage.vue')
+      name: mypage,
+      component: mypage
     },
     {
       path: '/test',
-      name: 'test',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/test.vue')
+      name: test,
+      component: test
     }
   ]
-})
+});
 
-export default router
+module.exports = router;

@@ -45,11 +45,7 @@
             <div id="yegumListArea">
               <label><h2 class="goodsListTitle">예금상품</h2></label>
               <div id="yegumList">
-                <button
-                  class="goodsOneCell"
-                  v-for="item in yegumList"
-                  v-on:click="tapGoodsCellOne(item[0])"
-                >
+                <button class="goodsOneCell" v-for="item in yegumList" v-on:click="tapGoodsCellOne(item[0])">
                   <h4>{{ item[0] }}</h4>
                   <p>{{ item[1] }}</p>
                 </button>
