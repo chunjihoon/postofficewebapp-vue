@@ -2,7 +2,7 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const webpack = require('webpack');
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -46,7 +46,7 @@ module.exports = {
     plugins: [
         new VueLoaderPlugin(),
         new webpack.DefinePlugin({
-            'process.env.BASE_URL': JSON.stringify(process.env.BASE_URL),
+            'process.env.BASE_URL': JSON.stringify('production'), // process.env.BASE_URL
             __VUE_OPTIONS_API__: true,
             __VUE_PROD_DEVTOOLS__: false,
             __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false

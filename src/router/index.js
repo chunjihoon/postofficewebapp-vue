@@ -2,6 +2,8 @@
 // import app from '../App.vue'
 // import products from '../views/products.vue'
 
+// const App = require("../App.vue");
+
 const createRouter = require('vue-router').createRouter;
 const createWebHistory = require('vue-router').createWebHistory;
 
@@ -42,4 +44,9 @@ const router = createRouter({
   ]
 });
 
-module.exports = router;
+//module.exports = router;
+// return router;
+
+// var _vueapp = new vueapp({
+//   router: router
+// }).$mount('#app')

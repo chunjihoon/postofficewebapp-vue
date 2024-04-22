@@ -1,17 +1,22 @@
-<template>
-  <header>
+<!-- <template>
+  <div id="app">
     <div class="wrapper">
       <div class="nav-bar">
-        <router-link to='/products'>상품목록</router-link>
-        <router-link to="/favorites">즐겨찾기</router-link>
-        <router-link to="/mypage">마이페이지</router-link>
-        <router-link to="/test">TEST</router-link>
+        <RouterLink to='/products'>상품목록</RouterLink>
+        <RouterLink to="/favorites">즐겨찾기</RouterLink>
+        <RouterLink to="/mypage">마이페이지</RouterLink>
+        <RouterLink to="/test">TEST</RouterLink>
       </div>
     </div>
-  </header>
-  <body></body>
-  <footer></footer>
-  <router-view />
+    <RouterView></RouterView>
+  </div>
+</template> -->
+<template>
+  <!-- <RouterView /> -->
+  <div id="app">
+    <div>App.vue</div>
+    <RouterView />
+  </div>
 </template>
 
 <script setup>

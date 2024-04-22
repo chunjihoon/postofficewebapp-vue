@@ -13,14 +13,14 @@ const createPinia = require("pinia").createPinia;
 const axios = require("axios");
 
 const App = require("./App.vue");
-const router = require("./router");
+const router = require("./router/index.js").router;
 
 const app = createApp(App);
 
 // app.use(createPinia());
-// app.use(router);
-// app.mount('#app');
+app.use(router);
+app.mount('#app');
 
-createApp(App).use(router).mount('#app');
+// createApp(App).use(router).mount('#app');
 
 app.config.globalProperties.$axios = axios;

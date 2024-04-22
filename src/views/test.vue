@@ -1,5 +1,5 @@
 <template>
-  <!doctype html>
+  <!-- <!doctype html>
   <html lang="ko">
     <head>
       <meta charset="UTF-8" />
@@ -11,46 +11,50 @@
       <title>항공 예매</title>
     </head>
 
-    <body>
-      <div class="header">
-        <h1>TEST</h1>
-      </div>
+    <body> -->
+      <div>
+        <div class="header">
+          <h1>TEST</h1>
+        </div>
 
-      <div class="main">
-        <div id="jb-division-line"></div>
+        <div class="main">
+          <div id="jb-division-line"></div>
 
-        <div id="showGoodsList">
-          <div id="yegumList">
-            <!-- <div id="bannerArea">
-                  <p>예금상품 관련 배너 표출</p>
-                </div> -->
-            <div id="yegumListArea">
-              <label><h2 class="goodsListTitle">TEST 화면입니다.</h2></label>
-              <div id="yegumList">
-                <button
-                  class="testOneCell"
-                  v-for="item in testList"
-                  v-on:click="apiCallTest(item[2])"
-                >
-                  <h4>{{ item[0] }}</h4>
-                  <p>{{ item[1] }}</p>
-                  <p>{{ item[2] }}</p>
-                </button>
+          <div id="showGoodsList">
+            <div id="yegumList">
+              <!-- <div id="bannerArea">
+                    <p>예금상품 관련 배너 표출</p>
+                  </div> -->
+              <div id="yegumListArea">
+                <label><h2 class="goodsListTitle">TEST 화면입니다.</h2></label>
+                <div id="yegumList">
+                  <button
+                    class="testOneCell"
+                    v-for="item in testList"
+                    v-bind:key="item"
+                    v-on:click="apiCallTest(item[2])"
+                  >
+                    <h4>{{ item[0] }}</h4>
+                    <p>{{ item[1] }}</p>
+                    <p>{{ item[2] }}</p>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="footer">
-        <p>Footer</p>
+        <div class="footer">
+          <p>Footer</p>
+        </div>
       </div>
-    </body>
-  </html>
+    <!-- </body>
+  </html> -->
 </template>
 
 <script>
-import { ref } from 'vue'
+// import { ref } from 'vue'
+const ref = require('vue');
 export default {
   data() {
     return {

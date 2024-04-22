@@ -1,5 +1,5 @@
 <template>
-  <!doctype html>
+  <!-- <!doctype html>
   <html lang="ko">
     <head>
       <meta charset="UTF-8" />
@@ -9,65 +9,68 @@
         rel="stylesheet"
       />
       <title>항공 예매</title>
-    </head>
+    </head> -->
 
-    <body>
-      <div class="header">
-        <h1>즐겨찾기</h1>
-      </div>
-
-      <div class="main">
-        <div id="toggleGoodsTypeArea">
-          <button
-            id="yegum"
-            class="toggleGoodsTypeBtn active"
-            v-on:click="toggleGoodsType('yegum')"
-          >
-            예금
-          </button>
-          <button id="card" class="toggleGoodsTypeBtn" v-on:click="toggleGoodsType('card')">
-            카드
-          </button>
-          <button id="bohum" class="toggleGoodsTypeBtn" v-on:click="toggleGoodsType('bohum')">
-            보험
-          </button>
-          <button id="fund" class="toggleGoodsTypeBtn" v-on:click="toggleGoodsType('fund')">
-            펀드
-          </button>
+    <!-- <body> -->
+      <div>
+        <div class="header">
+          <h1>즐겨찾기</h1>
         </div>
-        <div id="jb-division-line"></div>
 
-        <div id="showGoodsList">
-          <div id="yegumList">
-            <!-- <div id="bannerArea">
-              <p>예금상품 관련 배너 표출</p>
-            </div> -->
-            <div id="yegumListArea">
-              <label><h2 class="goodsListTitle">즐겨찾기한 상품</h2></label>
-              <div id="yegumList">
-                <button
-                  class="goodsOneCell"
-                  v-for="item in yegumList"
-                  v-on:click="tapGoodsCellOne(item[0])"
-                >
-                  <h4>{{ item[0] }}</h4>
-                  <p>{{ item[1] }}</p>
-                </button>
+        <div class="main">
+          <div id="toggleGoodsTypeArea">
+            <button
+              id="yegum"
+              class="toggleGoodsTypeBtn active"
+              v-on:click="toggleGoodsType('yegum')"
+            >
+              예금
+            </button>
+            <button id="card" class="toggleGoodsTypeBtn" v-on:click="toggleGoodsType('card')">
+              카드
+            </button>
+            <button id="bohum" class="toggleGoodsTypeBtn" v-on:click="toggleGoodsType('bohum')">
+              보험
+            </button>
+            <button id="fund" class="toggleGoodsTypeBtn" v-on:click="toggleGoodsType('fund')">
+              펀드
+            </button>
+          </div>
+          <div id="jb-division-line"></div>
+
+          <div id="showGoodsList">
+            <div id="yegumList">
+              <!-- <div id="bannerArea">
+                <p>예금상품 관련 배너 표출</p>
+              </div> -->
+              <div id="yegumListArea">
+                <label><h2 class="goodsListTitle">즐겨찾기한 상품</h2></label>
+                <div id="yegumList">
+                  <button
+                    class="goodsOneCell"
+                    v-for="item in yegumList"
+                    v-bind:key="item"
+                    v-on:click="tapGoodsCellOne(item[0])"
+                  >
+                    <h4>{{ item[0] }}</h4>
+                    <p>{{ item[1] }}</p>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="footer">
+          <p>Footer</p>
+        </div>
       </div>
-
-      <div class="footer">
-        <p>Footer</p>
-      </div>
-    </body>
-  </html>
+    <!-- </body>
+  </html> -->
 </template>
 
 <script>
-import { ref } from 'vue'
+// import { ref } from 'vue'
+const ref = require('vue');
 export default {
   data() {
     return {
@@ -101,8 +104,8 @@ export default {
 }
 </script>
 
-<!-- <style scoped>
+<style scoped>
 body {
   padding-top: 70px;
 }
-</style> -->
+</style>
